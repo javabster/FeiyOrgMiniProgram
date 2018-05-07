@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/frontPage/frontPage",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/frontPage/frontPage",
     "pages/categories/categories",
     "pages/organisation/organisation"
   ],

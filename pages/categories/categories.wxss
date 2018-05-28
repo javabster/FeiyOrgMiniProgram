@@ -1,1 +1,23 @@
 /* pages/categories/categories.wxss */
+.rowView {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25%;
+}
+
+.view {
+  height: 600px;
+}
+
+.categoryButton {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: lightgray; */
+  border: solid 0.5px black;
+}

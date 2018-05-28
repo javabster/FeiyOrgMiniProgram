@@ -1,2 +1,18 @@
 <!--pages/organisation/organisation.wxml-->
-<text>pages/organisation/organisation.wxml</text>
+<view class="view">
+  <swiper class="view" autoplay="true">
+    <block wx:for="{{array}}" wx:for-item="i">
+      <swiper-item>
+      <view class="view">
+          <view class="background"></view>
+            <view class="mainView">
+            <view class="logo"></view>
+            <view class="title"><text>{{i.name}}</text></view>
+            <view class="description">{{i.description}}</view>
+            <button class="button"><text>Find out more!</text></button>
+            </view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

@@ -1,2 +1,4 @@
 <!--pages/frontPage/frontPage.wxml-->
-<text>this will be the first page!</text>
+<view class="view">
+<button class="feiyButton" bindtap="onTap">GO!</button>
+</view>

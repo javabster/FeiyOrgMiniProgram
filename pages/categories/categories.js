@@ -1,20 +1,30 @@
 // pages/categories/categories.js
+var app = getApp();
+var catKey = 12;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    key: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log('on load:' + this.data.key)
   },
-
+  
+  onTap: function(event) {
+    app.globalData.categoryKey = event.target.dataset.key
+    
+    wx.navigateTo({
+      url: '../organisation/organisation',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -62,5 +72,8 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+
+
 })

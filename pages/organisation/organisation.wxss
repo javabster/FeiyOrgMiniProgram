@@ -1,1 +1,70 @@
 /* pages/organisation/organisation.wxss */
+/* Feiy styles:
+      light turquoise (feiy primary): #37D7D4
+      slightly darker turquise (feiy secondary): #31c7c5
+      dark grey: #999999
+      font: Arvo, fontweight: lighter
+        */
+
+.view {
+  height: 800px;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  /* background-color: blue; */
+  font-family: Arvo;
+  /* font-weight: lighter; */
+  color: #999999;
+}
+
+.mainView {
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
+  width: 100%;
+  align-items: center; 
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin-top: 35%;
+}
+
+.background {
+  width: 100%;
+  height: 25%;
+  background-color: grey;
+  position: absolute;
+  z-index: -1;
+}
+
+.title {
+  width: 60%;
+  height: 40px;
+  /* background-color: aqua; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.description {
+  width: 80%;
+  height: 150px;
+  /* background-color: greenyellow;  */
+  text-align: center;
+}
+
+.button {
+  height: 75px;
+  width: 80%;
+  background-color: #37D7D4;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

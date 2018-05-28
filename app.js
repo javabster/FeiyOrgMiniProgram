@@ -41,6 +41,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    categoryKey: null,
+    array: [],
   }
 })

@@ -1,25 +1,61 @@
 // pages/organisation/organisation.js
+var categories = require('../categories/categories.js');
+var app = getApp();
+const AV = require('../../utils/av-weapp-min.js');
+// var orgArray = [];
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    key: null,
+    array: [{name: '', 
+             description: ''}, 
+            ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function () {
+    this.setData({ 
+       key: app.globalData.categoryKey
+     })
+
+    console.log("key: " + this.data.key)  
+
+    var that = this;
+    var orgArray = [];
+
+    var query = new AV.Query('organisation')
+    query.find().then(function (orgs) {
+      var key = that.data.key;
+      orgs.forEach(function (org) {
+        var cat = org.get('category');
+        if (cat === key) { 
+          var orgName = org.get('name');
+          var orgDescription = org.get('description');
+    
+          var orgObject = {name: orgName, description: orgDescription};
+          orgArray.push(orgObject);
+          that.setData({
+            'array': orgArray
+          })
+          }
+      })
+    })
+
+    console.log(this.data.array);
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**

@@ -8,6 +8,13 @@ Page({
   
   },
 
+  onTap: function() {
+    console.log('tap');
+    wx.navigateTo({
+      url: '../categories/categories'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

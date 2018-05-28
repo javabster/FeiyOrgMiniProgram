@@ -1,2 +1,19 @@
 <!--pages/categories/categories.wxml-->
-<text>pages/categories/categories.wxml</text>
+<view class="view">
+  <view class="rowView">
+    <button data-key="1" bindtap="onTap" class="categoryButton">Community</button>
+    <button data-key="2" bindtap="onTap" class="categoryButton">Education</button>
+  </view>
+  <view class="rowView">
+    <button data-key="3" bindtap="onTap" class="categoryButton">Environment</button>
+    <button data-key="4" bindtap="onTap" class="categoryButton">Fashion</button>
+  </view>
+  <view class="rowView">
+    <button data-key="5" bindtap="onTap" class="categoryButton">Health</button>
+    <button data-key="6" bindtap="onTap" class="categoryButton">Inclusion</button>
+  </view>
+  <view class="rowView">
+    <button data-key="7" bindtap="onTap" class="categoryButton">Waste</button>
+    <button data-key="8" bindtap="onTap" class="categoryButton">All Categories</button>
+  </view>
+</view>

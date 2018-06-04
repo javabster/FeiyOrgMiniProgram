@@ -10,7 +10,7 @@
   </view>
   <view class="rowView">
     <button data-key="5" bindtap="onTap" class="categoryButton">Health</button>
-    <button data-key="6" bindtap="onTap" class="categoryButton">Inclusion</button>
+    <button data-key="6" bindtap="onTap" class="categoryButton">Food</button>
   </view>
   <view class="rowView">
     <button data-key="7" bindtap="onTap" class="categoryButton">Waste</button>

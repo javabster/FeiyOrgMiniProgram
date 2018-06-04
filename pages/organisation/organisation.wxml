@@ -1,12 +1,12 @@
 <!--pages/organisation/organisation.wxml-->
-<view class="view">
+<view style="background-color: #eafbfb">
   <swiper class="view" autoplay="true">
     <block wx:for="{{array}}" wx:for-item="i">
       <swiper-item>
       <view class="view">
-          <view class="background"></view>
+          <image class="background" mode="scaleToFill" src="{{i.background}}"></image>
             <view class="mainView">
-            <view class="logo"></view>
+            <image class="logo" mode="scaleToFill" src="{{i.logo}}"></image>   
             <view class="title"><text>{{i.name}}</text></view>
             <view class="description">{{i.description}}</view>
             <button class="button"><text>Find out more!</text></button>

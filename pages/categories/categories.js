@@ -8,7 +8,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    key: null
+    key: null,
+    EdSrc: '../../images/Education.png',
+    ComSrc: '../../images/Community.jpg',
+    EnvSrc: '../../images/Environment.png',
+    FshnSrc: '../../images/Fashion.jpg',
+    HlthSrc: '../../images/Health.jpg', 
+    FdSrc: '../../images/Food.png',
+    WtSrc: '../../images/Waste.png',
+    AllSrc: '../../images/AllCategories.png',
   },
 
   /**

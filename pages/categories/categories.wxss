@@ -13,11 +13,25 @@
 .categoryButton {
   margin: 0;
   padding: 0;
-  width: 50%;
+  width: 55%;
+  height: 101%;
   border-radius: 0px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* background-color: lightgray; */
-  border: solid 0.5px black;
+  justify-content: center;  
+  /* background-color: grey; */
+  /* border: solid 0.5px black; */
+  /* z-index: -1; */
+}
+
+.Button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding-top: 55px;
+  color: white;
 }

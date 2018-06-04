@@ -1,19 +1,35 @@
 <!--pages/categories/categories.wxml-->
 <view class="view">
   <view class="rowView">
-    <button data-key="1" bindtap="onTap" class="categoryButton">Community</button>
-    <button data-key="2" bindtap="onTap" class="categoryButton">Education</button>
+    <image class="categoryButton" src="{{ComSrc}}">
+      <button data-key="1" bindtap="onTap" class="Button">Community</button>
+    </image>
+    <image class="categoryButton" src="{{EdSrc}}">
+      <button data-key="2" bindtap="onTap" class="Button">Education</button>
+    </image>  
   </view>
   <view class="rowView">
-    <button data-key="3" bindtap="onTap" class="categoryButton">Environment</button>
-    <button data-key="4" bindtap="onTap" class="categoryButton">Fashion</button>
+    <image class="categoryButton" src="{{EnvSrc}}">
+      <button data-key="3" bindtap="onTap" class="Button">Environment</button>
+    </image>
+    <image class="categoryButton"src="{{FshnSrc}}">
+      <button data-key="4" bindtap="onTap" class="Button">Fashion</button>
+    </image>
   </view>
   <view class="rowView">
-    <button data-key="5" bindtap="onTap" class="categoryButton">Health</button>
-    <button data-key="6" bindtap="onTap" class="categoryButton">Food</button>
+    <image class="categoryButton" src="{{HlthSrc}}">
+      <button data-key="5" bindtap="onTap" class="Button">Health</button>
+    </image>
+    <image class="categoryButton" src="{{FdSrc}}">
+      <button data-key="6" bindtap="onTap" class="Button">Food</button>
+    </image>
   </view>
   <view class="rowView">
-    <button data-key="7" bindtap="onTap" class="categoryButton">Waste</button>
-    <button data-key="8" bindtap="onTap" class="categoryButton">All Categories</button>
+    <image class="categoryButton" src="{{WtSrc}}">
+      <button data-key="7" bindtap="onTap" class="Button">Waste</button>
+    </image>
+    <image class="categoryButton" src="{{AllSrc}}">
+      <button data-key="8" bindtap="onTap" class="Button">All Categories</button>
+    </image>
   </view>
 </view>

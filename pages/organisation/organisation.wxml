@@ -9,7 +9,7 @@
             <image class="logo" mode="aspectFit" src="{{i.logo}}"></image>   
             <view class="title"><text>{{i.name}}</text></view>
             <view class="description">{{i.description}}</view>
-            <button class="button"><text>Find out more!</text></button>
+            <button data-id="3" class="button"  bindtap="onTap"><text>Find out more!</text></button>
             </view>
       </view>
       </swiper-item>

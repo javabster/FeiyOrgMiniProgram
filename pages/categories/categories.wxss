@@ -23,6 +23,7 @@
   /* background-color: grey; */
   /* border: solid 0.5px black; */
   /* z-index: -1; */
+  border-width:0;
 }
 
 .Button {

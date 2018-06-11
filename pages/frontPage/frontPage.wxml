@@ -1,4 +1,12 @@
 <!--pages/frontPage/frontPage.wxml-->
 <view class="view">
-<button class="feiyButton" bindtap="onTap">GO!</button>
+<view class="textbox">
+  <text>Click here to</text> 
+  <text>discover our</text>
+  <text>organisations!</text>
+</view>
+<view class="feiyButton" bindtap="onTap">
+  <image class="logo" src="{{logo}}"></image>
+</view>
+
 </view>

@@ -1,18 +1,11 @@
-// pages/frontPage/frontPage.js
+// http://www.feiy.co/organizations.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    logo: '../../images/feiy.jpeg'
-  },
-
-  onTap: function() {
-    console.log('tap');
-    wx.navigateTo({
-      url: '../categories/categories'
-    })
+  
   },
 
   /**

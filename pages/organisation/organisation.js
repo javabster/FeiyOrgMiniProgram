@@ -24,13 +24,13 @@ Page({
     array: [{name: '', 
              description: '',
              logo: '',
-             background: ''}, 
+             background: '',
+             link: '',
+             id: null,
+             }, 
             ],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function () {
     this.setData({ 
        key: app.globalData.categoryKey
@@ -40,6 +40,7 @@ Page({
 
     var that = this;
     var orgArray = [];
+    var a = 0;
 
     var query = new AV.Query('organisation')
     query.include('logo');
@@ -52,22 +53,70 @@ Page({
           var orgDescription = org.get('description');
           var orgLogo = org.get('logo');
           var orgBackground = org.get('background');
-          console.log('background.url', orgBackground.attributes.url);
-          console.log('backgorund object', orgBackground);
+          var orgLink = org.get('link');
+          console.log('link: ', orgLink);
+          // console.log('background.url', orgBackground.attributes.url);
+          // console.log('background object', orgBackground);
     
-          var orgObject = {name: orgName, description: orgDescription, logo: orgLogo.attributes.url, background: orgBackground.attributes.url};
+          var orgObject = {name: orgName, 
+                           description: orgDescription, 
+                           logo: orgLogo.attributes.url, 
+                           background: orgBackground.attributes.url, 
+                           link: orgLink,
+                           id: a,
+                           };
+
           orgArray.push(orgObject);
+
           that.setData({
             'array': orgArray
-          })
+          });
+
+          a++;
+
+          } else if (key === '8') {
+          var orgName = org.get('name');
+          var orgDescription = org.get('description');
+          var orgLogo = org.get('logo');
+          var orgBackground = org.get('background');
+          var orgLink = org.get('link');
+          console.log('link: ', orgLink);
+
+          var orgObject = {
+            name: orgName,
+            description: orgDescription,
+            logo: orgLogo.attributes.url,
+            background: orgBackground.attributes.url,
+            link: orgLink,
+            id: a,
+          };
+
+          orgArray.push(orgObject);
+
+          that.setData({
+            'array': orgArray
+          });
+
+          a++;
           }
       })
-    })
-
-    console.log(this.data.array);
-    
+    })   
   },
 
+  onTap: function() {
+    console.log('category tap');
+    console.log(this.data.array[0].id);
+    console.log(this.data.array[1].id);
+    console.log(event);
+    console.log(event.data);
+    // var index = event.target.dataset.key;
+    // console.log(index);
+    // console.log(this.data.array[index].name);
+
+    wx.navigateTo({
+      url: 'http://www.feiy.co/organizations',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -28,6 +28,7 @@ Page({
   
   onTap: function(event) {
     app.globalData.categoryKey = event.target.dataset.key
+    console.log(event);
     
     wx.navigateTo({
       url: '../organisation/organisation',

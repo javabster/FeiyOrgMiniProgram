@@ -21,12 +21,12 @@ Page({
    */
   data: {
     key: null,
+    qr: '../../images/qrcode.png',
     array: [{name: '', 
              description: '',
              logo: '',
              background: '',
              link: '',
-             id: null,
              }, 
             ],
   },
@@ -40,7 +40,18 @@ Page({
 
     var that = this;
     var orgArray = [];
-    var a = 0;
+
+    function shuffleArray(array) {
+      var ctr = array.length, temp, index;
+      while (ctr > 0) {
+        index = Math.floor(Math.random() * ctr);
+        ctr--;
+        temp = array[ctr];
+        array[ctr] = array[index];
+        array[index] = temp;
+      }
+      return array
+    }
 
     var query = new AV.Query('organisation')
     query.include('logo');
@@ -63,16 +74,14 @@ Page({
                            logo: orgLogo.attributes.url, 
                            background: orgBackground.attributes.url, 
                            link: orgLink,
-                           id: a,
                            };
 
           orgArray.push(orgObject);
+          orgArray = shuffleArray(orgArray);
 
           that.setData({
             'array': orgArray
           });
-
-          a++;
 
           } else if (key === '8') {
           var orgName = org.get('name');
@@ -88,7 +97,6 @@ Page({
             logo: orgLogo.attributes.url,
             background: orgBackground.attributes.url,
             link: orgLink,
-            id: a,
           };
 
           orgArray.push(orgObject);
@@ -97,29 +105,16 @@ Page({
             'array': orgArray
           });
 
-          a++;
           }
       })
-    })   
+    }) 
+    var array1 = [0,1,2,3];
+    console.log(array1);
+    console.log(shuffleArray(array1));  
   },
 
-  onTap: function() {
-    console.log('category tap');
-    console.log(this.data.array[0].id);
-    console.log(this.data.array[1].id);
-    console.log(event);
-    console.log(event.data);
-    // var index = event.target.dataset.key;
-    // console.log(index);
-    // console.log(this.data.array[index].name);
 
-    wx.navigateTo({
-      url: 'http://www.feiy.co/organizations',
-    })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+
   onReady: function () {
 
   },

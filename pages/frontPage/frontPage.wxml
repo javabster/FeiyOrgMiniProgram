@@ -1,12 +1,16 @@
 <!--pages/frontPage/frontPage.wxml-->
+
 <view class="view">
+<view class="title">
+  <text>Curious about our</text>
+  <text>social and environmental</text>
+  <text>impact organisations?</text>
+</view>
 <view class="textbox">
-  <text>Click here to</text> 
-  <text>discover our</text>
-  <text>organisations!</text>
+  <text>Click here!</text>
 </view>
 <view class="feiyButton" bindtap="onTap">
   <image class="logo" src="{{logo}}"></image>
 </view>
-
+<image class="feiyName" src="{{name}}"></image>
 </view>

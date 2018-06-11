@@ -13,6 +13,7 @@
   flex-direction: column; */
   /* background-color: lightblue; */
   font-family: Arvo;
+  font-weight: normal;
   /* font-weight: lighter; */
   color: #999999;
 }
@@ -23,6 +24,7 @@
   height: 100%;
   width: 100%;
   align-items: center;
+  font-weight: normal;
   /* justify-content: space-between;  */
 }
 
@@ -53,6 +55,8 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  font-weight: bolder;
+  font-size: x-large;
 }
 
 .description {
@@ -62,11 +66,25 @@
   text-align: center;
 }
 
+.QR {
+  width: 80%;
+  padding-top: 50px;
+  text-align: center;
+  font-size: small;
+}
+
+.QRimage {
+  width: 150px;
+  height: 150px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
 .button {
   height: 75px;
   width: 80%;
   background-color: #37D7D4;
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

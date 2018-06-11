@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    logo: '../../images/feiy.jpeg'
+    logo: '../../images/feiyLogo.png',
+    name: '../../images/feiyName.png',
   },
 
   onTap: function() {

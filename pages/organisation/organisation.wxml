@@ -9,7 +9,8 @@
             <image class="logo" mode="aspectFit" src="{{i.logo}}"></image>   
             <view class="title"><text>{{i.name}}</text></view>
             <view class="description">{{i.description}}</view>
-            <button data-id="3" class="button"  bindtap="onTap"><text>Find out more!</text></button>
+            <view class="QR">For more info about social & environmental initiatives, events & jobs, scan the QR code</view>
+            <image class="QRimage" src="{{qr}}"></image>
             </view>
       </view>
       </swiper-item>
